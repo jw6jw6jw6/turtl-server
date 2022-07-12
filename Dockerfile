@@ -7,6 +7,7 @@ EXPOSE 8181
 WORKDIR /app
 COPY . .
 COPY config/config.yaml.docker config/config.yaml
+COPY example-plugins/ plugins/
 
 RUN apk add -U bash git &&\
   npm install --production &&\
