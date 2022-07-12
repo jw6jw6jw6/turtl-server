@@ -13,5 +13,5 @@ RUN apk add -U bash git &&\
   npm install --production &&\
   ./scripts/install-plugins.sh &&\
   mkdir /plugins /uploads
-
+RUN cd plugins/ && npm install
 ENTRYPOINT ["/app/entrypoint.sh"]
